@@ -1,0 +1,313 @@
+@import "reset.css";
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "xeicon";
+    src: url("fonts/xeicon.eot?3ka2yj");
+    src: url("fonts/xeicon.eot?3ka2yj#iefix") format("embedded-opentype"),
+        url("fonts/xeicon.woff2?3ka2yj") format("woff2"),
+        url("fonts/xeicon.ttf?3ka2yj") format("truetype"),
+        url("fonts/xeicon.woff?3ka2yj") format("woff"),
+        url("fonts/xeicon.svg?3ka2yj#xeicon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "Pretendard-Regular";
+    color: #fff;
+}
+html{
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden {
+    display : none;
+}
+/* Header*/
+.header {
+    color: white;
+    font-weight: bold;
+    background-color : rgba(26, 26, 26, 0.4);
+    width : 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+
+.header>._blank {
+    flex-grow: 8;
+}
+.header>
+#header_weather,
+.hearder_reset,
+.hearder_todoList {
+    margin : 25px;
+    flex-grow: .7;
+    cursor: pointer;
+}
+.header>.header_changeBgImg:active {
+    transform: scale(.97);
+}
+.header>.hearder_reset:active {
+    transform: scale(.97);
+}
+.header>.hearder_todoList:active {
+    transform: scale(.97);
+}
+
+.header>#header_weather {
+    margin-right: 3%;
+}
+
+#weather, #city, #temp{
+    display: flex;
+    
+    flex-direction: column;
+}
+
+/* Header*/
+
+/* 뒷 배경 이미지*/
+#imgwrap {
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    bottom: 0px;
+    z-index: -1;
+    opacity: .8;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 뒷 배경 이미지*/
+
+/* login-form*/
+
+#login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+#login-form input {
+    width: 300px;
+    height: 80px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    text-align: center;
+    border: none;
+    border-bottom: 5px solid #fff;
+    font-size: 1.2rem;
+}
+
+#login-form input::placeholder {
+    color: #fff;
+    font-weight: 600;
+}
+
+#login-form button {
+    all: unset;
+    font-size: 10px;
+    cursor: pointer;
+    opacity: none;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 5px 8px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+    color: #000;
+}
+
+/* login-form*/
+
+/* Nmae */
+#greeting {
+    font-size : 2.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+}
+/* Nmae */
+
+/* Todo List Modal */
+.mainTodo {
+    background-color : rgba(256,256,256,0.8);
+    width : 300px;
+    height: 400px;
+    display: flex;
+    position: fixed;
+    top : 10%;
+    left: 7%;
+    align-items: center;
+    flex-direction: column;
+    margin:2vh,0;
+    border-radius: 50px;
+    overflow: scroll;
+}
+.main_title {
+    color: grey;
+    margin: 2.5vh;
+    font-size:1rem;
+}
+#todo-form input{
+    border: none;
+    background-color: transparent;
+    color: grey;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+    font:inherit;
+    width: 200px;
+}
+#todo-form button {
+    all: unset;
+    font-size:10px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFF;
+    width: 60px;
+    height: 24px;
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50 50 93/11%);
+}
+#todo-form button:active {
+    transform:scale(0.9);
+}
+.main_todo_list {
+    margin-top: 3vh;
+}
+#todo-list {
+    color : grey;
+    font-size: 2.3vh;
+    font-weight: 600;
+}
+
+#todo-list li {
+    padding-top:1em
+}
+#todo-list button {
+    all: unset;
+    font-size: 1.7vh;
+    cursor: pointer;
+    opacity: none;
+    margin-left: 10px;
+    padding: 6px 5px;
+    width: 16px;
+    height: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%),
+    0 1px 3px rgb(0 0 0 / 8%);
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: white;
+}
+/* Todo List Modal */
+
+/* LOGOUT */ 
+.logout {
+    display: flex;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* LOGOUT */
+
+/* 달력 / 시계 */
+
+#clock {
+    display: flex;
+    top: 35%;
+    left: 50%;
+    position: fixed;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#clock>#datePrint{
+    font-size : 2.5vh;
+    letter-spacing: .5vh;;
+}
+#clock>#timePrint {
+    font-size: 7vh;
+    letter-spacing: 1vh;
+
+}
+
+/* 달력 / 시계 */
+
+/* footer */
+
+footer {
+    position : fixed;
+    bottom: -10px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+#quote {
+    color:white;
+    width: 80%;
+    height: 70px;
+    border-radius: 50px;
+    background-color: rgba(26, 26, 26, 0.4);
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+#quote span:first-child {
+    font-size: 2vh;
+    margin-bottom: 0.4vw;
+    letter-spacing: .4vh;
+}
+#quote span:last-child {
+    font-size: 1.5vh;
+    letter-spacing: .5vh;
+    opacity: 0.7;
+}
+
+/* footer */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" media="all " />
+    <title>App</title>
+  </head>
+
+  <body>
+    <div class="header">
+      
+      <div class="hearder_todoList" id="test">
+        <p id="change">Show<br />ToDo List</p>
+      </div>
+      <div class="hearder_reset">Reset</div>
+      <div class="_blank"></div>
+      <div id="header_weather">
+        <span id="city"></span>
+        <span id="temp"></span>
+        <span id="weather"></span>
+      </div>
+    </div>
+    <form id="login-form" class="hidden">
+      <!-- required 비어 있으면 chrome 브라우저에서 자동으로 경고창과 focus 
+            해주고 event.keyCode 13번의 엔터를 눌렀을때 submit이 되는 역할도 해준다.-->
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What Your Name?"
+      />
+      <button type="submit">Login</button>
+    </form>
+    <div id="clock">
+      <div id="datePrint"></div>
+      <div id="timePrint"></div>
+    </div>
+    <h1 id="greeting" class="hidden"></h1>
+    <!-- <div class="logout">
+        <button>LOGOUT</button>
+    </div> -->
+    <main class="hidden">
+      <div class="mainTodo">
+        <div class="main_title">
+          <h1>To-Do List</h1>
+        </div>
+        <div class="main_todo_form">
+          <form id="todo-form">
+            <input type="text" placeholder="Write a To and Press" required />
+            <button type="submit">ADD</button>
+          </form>
+        </div>
+        <div class="main_todo_list">
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </footer>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/reset.js"></script>
+  </body>
+</html>
