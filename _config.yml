@@ -38,7 +38,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Kevin
+  name: Dong Yeong Jung
   email: kevin@beomhoit.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -93,12 +93,8 @@ comments:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    src: "https://utteranc.es/client.js"
-    repo: "dong-yeong0/dong-yeong0.github.io"         # <gh-username>/<repo>
-    issue_term: "pathname"  # < url | pathname | title | ...>
-    theme: "github-dark"
-    crossorigin: "anonymous"
-
+    repo: Dong-yeong0/dong-yeong0.github.io
+    issue_term: pathname
   # Giscus options › https://giscus.app
   giscus:
     repo:              # <gh-username>/<repo>
@@ -155,7 +151,7 @@ defaults:
   - scope:
       path: _drafts
     values:
-      comments: true
+      comments: false
   - scope:
       path: ''
       type: tabs             # see `site.collections`
