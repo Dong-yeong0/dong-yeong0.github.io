@@ -70,3 +70,49 @@ Virtualenv를 사용하면 두 케이스 모두 케어가 된다.
 - does not have as rich programmatic API (describe virtual environments without creating them).
     
     풍부한 프로그래밍 API를 보유하지 않음 (가상환경을 생성하지 않고 설명)
+
+## 1️⃣ virtualenv 설치 (Windows)
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install virtualenv
+
+# 설치 확인용
+virtualenv --version
+```
+
+## 2️⃣ virtaulenv 생성
+
+```powershell
+# 현재 디렉토리에 'venv" 이름으로 생성 (이름은 자유)
+virtualenv venv
+
+# 가상환경의 python 버전 명시도 가능 
+# argument는 --python=/버전 별 파이썬 설치 경로/python3, python2.7 가상환경 폴더 이름
+virtualenv --python="python 경로" venv
+```
+
+## 3️⃣ virtualenv 활성화
+
+```powershell
+.\venv\Scripts\activate
+
+# 실행 후 (venv) ~~ 나오면 활성화 성공
+(venv) ~~ : 
+```
+
+## 4️⃣ 가상환경 내부에 패키지 설치
+
+```powershell
+# 단독 설치
+(venv) ~~: pip install "패키지명"
+
+# .txt로 한번에 설치
+(venv) ~~: pip install -r "txt파일".txt
+```
+
+## 5️⃣ virtualenv 비활성화
+
+```powershell
+deactivate
+```
