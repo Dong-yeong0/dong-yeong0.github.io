@@ -7,11 +7,12 @@ tags: [docker]
 comments: true
 ---
 
+## Container
 ![Untitled](https://geeksterminal.com/wp-content/uploads/2019/11/docker-logo-310x162.png)
 
 Container는 가상화 기술 중 하나로 대표적으로 Linux Container가 있다. 기존 OS를 가상화 시키던 것과 달리 **Container는 OS레벨의 가상화로 프로세스를 격리시켜 동작하는 방식이다.**
 
-### VM  vs Docker
+## VM  vs Docker
 
 ![Untitled](https://blog.kakaocdn.net/dn/JloLY/btq7WUSbsmn/uVtXFK1zOz2FRKuFNNJdQk/img.jpg){: width="100%"}
 
