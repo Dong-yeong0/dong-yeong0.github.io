@@ -46,3 +46,7 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 
 간략히,
 컨테이너를 사용하는 것은 가상머신을 생성하는 것이 아니라 Host OS가 사용하는 자원을 분리하여 여러 환경을 만들 수 있도록 하는 것이다.
+
+## 3. Example
+
+![Untitled](/assets/img/profile.png)
