@@ -49,4 +49,4 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 
 ## 3. Example
 
-![Untitled](/assets/img/profile.png)
+![Untitled](../../../assets/img/posts/Docker/test.png)
