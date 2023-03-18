@@ -47,4 +47,30 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 간략히,
 컨테이너를 사용하는 것은 가상머신을 생성하는 것이 아니라 Host OS가 사용하는 자원을 분리하여 여러 환경을 만들 수 있도록 하는 것이다.
 
-## 3. Example
+## 3. Make nginx container
+
+간단하게 nginx 웹서버를 구동 시켜보자
+
+![](../../../assets/img/posts/docker/nginx.png)
+_구조는 요렇게 Host 80번 port에 들어오는 모든 트래픽은 Nginx container의 80번 port로 전달한다._
+
+#### Nginx image 다운로드
+
+```bash
+docker pull nginx
+
+# nginx 최신 버전 pull
+docker pull nginx:latest
+
+# nginx 버전 명시 pull
+docker pull nginx:1.16.1
+
+
+```
+
+
+#### 사용 가능한 이미지 조회
+
+```shell
+docker images ls
+```
