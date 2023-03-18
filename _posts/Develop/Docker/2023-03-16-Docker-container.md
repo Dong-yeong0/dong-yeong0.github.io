@@ -8,7 +8,7 @@ comments: true
 ---
 ![Untitled](https://geeksterminal.com/wp-content/uploads/2019/11/docker-logo-310x162.png)
 
-## 1. Container란?
+## Container란?
 
 Software는 OS와 library의 의존성을 가진다. 하나의 컴퓨터에서 성격이 다른 software를 실행할 때 호환 문제 및 어려움을 가질 수 있으며 관련된 환경구성 및 유지보수가 어렵다.
 
@@ -16,7 +16,7 @@ Container는 각 software의 실행에 필요한 환경을 독립적으로 가�
 
 Container는 가상화 기술 중 하나로 대표적으로 Linux Container가 있다. 기존 OS를 가상화 시키던 것과 달리 **Container는 OS레벨의 가상화로 프로세스를 격리시켜 동작하는 방식이다.**
 
-## 2. VM vs Container
+## VM vs Container
 
 ![Untitled](https://blog.kakaocdn.net/dn/JloLY/btq7WUSbsmn/uVtXFK1zOz2FRKuFNNJdQk/img.jpg){: width="100%"}
 
@@ -47,14 +47,14 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 간략히,
 컨테이너를 사용하는 것은 가상머신을 생성하는 것이 아니라 Host OS가 사용하는 자원을 분리하여 여러 환경을 만들 수 있도록 하는 것이다.
 
-## 3. Make nginx container
+## Make nginx container
 
 간단하게 nginx 웹서버를 구동 시켜보자
 
-![](../../../assets/img/posts/docker/nginx.png)
+![Untitled](../../../assets/img/posts/docker/nginx.png)
 _구조는 요렇게 Host 80번 port에 들어오는 모든 트래픽은 Nginx container의 80번 port로 전달한다._
 
-#### Nginx image 다운로드
+### Nginx image 다운로드
 
 ```bash
 docker pull nginx
@@ -64,13 +64,52 @@ docker pull nginx:latest
 
 # nginx 버전 명시 pull
 docker pull nginx:1.16.1
-
-
 ```
 
+![Untitled](../../../assets/img/posts/docker/nginx-pull.png)
+_"docker pull nginx" 입력_
 
-#### 사용 가능한 이미지 조회
+### 이미지 조회
 
 ```shell
-docker images ls
+docker image ls -a
 ```
+![Untitled](../../../assets/img/posts/docker/docker_image_ls.png)
+_Pull 받았던 nginx가 보인다_
+
+### Container 생성
+```shell
+docker run -d --name nginx -p 80:80 nginx
+# docker run -d --name {Container name} -p {host port}:{container port} {image name}
+```
+
+> run : Container 생성 명령어.
+>
+> -d : Container 생성 시 백그라운드에서 실행하는 옵션.
+>
+> --name : Container의 이름 지정 옵션. (미입력 시 이름은 무작위)
+>
+> -p : host port number와 conatiner 내부 port를 포워딩 해주는 옵션 ("host":"docker container")
+
+![Untitled](../../../assets/img/posts/docker/docker_run.png)
+_이상한 문구 나오면 성공_
+
+### Container 조회
+```shell
+# 현재 실행 되고 있는 container 조회
+docker ps
+
+# 모든 Container 조회
+docker ps -a
+```
+![Untitled](../../../assets/img/posts/docker/docker_ps.png)
+_아까 올린 nginx가 보인다_
+
+
+### 결과 확인
+주소창에 [localhost](http://localhost "localhost")로 입력. 
+_(web server 기본 port 번호 인 80을 사용했기 때문에 port 번호는 생략)_
+
+![Untitled](../../../assets/img/posts/docker/nginx_home.png)
+
+위 와 같은 화면이 나오면 컨테이너 생성 완료!
