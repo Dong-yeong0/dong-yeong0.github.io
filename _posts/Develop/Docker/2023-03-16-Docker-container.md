@@ -2,11 +2,12 @@
 layout: post
 title: "[Docker] Container 🐋"
 date: 2023-03-16 12:41:00 +09:00
-categories: [docker]
+categories: [docker, container]
 tags: [docker]
 comments: true
 ---
-![Untitled](https://geeksterminal.com/wp-content/uploads/2019/11/docker-logo-310x162.png)
+
+![Untitled](../../../assets/img/posts/docker/docker_conatiner.png)
 
 ## Container란?
 
