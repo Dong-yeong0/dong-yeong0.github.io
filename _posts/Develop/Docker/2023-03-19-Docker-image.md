@@ -38,8 +38,64 @@ RUN, ADD, COPY 이 3가지만 layer로 저장되고, CMD, LABEL, ENV, EXPOSE 등
 
 **기존 이미지에 추가적인 파일이 필요할 때, 다시 다운로드를 하는게 아닌 해당 파일을 추가하기 위한 개념이다.**
 
+## Example
 
+간단히 Flask를 dockerizing (이미지화) 해보겠읍니다
 
+디렉토리 구조는
+```bash
+docker
+├── flask
+│   └── app.py
+├── requirements.txt
+└── Dockerfile
+```
+docker 디렉토리 안에 Dockerfile, requirements (패키지 목록), flask를 넣어준다.
 
+꼭 최상위 폴더 이름이 docker가 아니여도 됩니다.
 
-간단히 Flask를 dockerizing (이미지화) 해보겠읍니다 내일..
+```
+# requirements.txt
+Flask
+```
+requirements.txt에 flask를 추가하고,
+
+```Dockerfile
+FROM python:3.8
+
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt
+
+COPY ./flask /flask
+WORKDIR /flask
+
+CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
+```
+
+Dockerfile에는 flask 설치 및 실행하는 command를 추가한다.
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello docker image"
+
+if __name__ == "__main__":
+    app.run()
+```
+app.py도 작성해준다.
+
+```shell
+docker build -t my-flask .
+# docker build -t {repository name}:{version} . (path)
+```
+Dockerfile이 있는 디렉토리 안에서 위 command 실행
+
+```shell
+docker image ls
+```
+
+실행 시 
