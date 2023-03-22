@@ -7,7 +7,7 @@ tags: [docker]
 comments: true
 ---
 
-![Untitled](../../../assets/img/posts/docker/docker_conatiner.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/docker_conatiner.png)
 
 ## Container란?
 
@@ -52,7 +52,7 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 
 간단하게 nginx 웹서버를 구동 시켜보자
 
-![Untitled](../../../assets/img/posts/docker/nginx.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/nginx.png)
 _구조는 요렇게 Host 80번 port에 들어오는 모든 트래픽은 Nginx container의 80번 port로 전달한다._
 
 ### Nginx image 다운로드
@@ -67,7 +67,7 @@ docker pull nginx:latest
 docker pull nginx:1.16.1
 ```
 
-![Untitled](../../../assets/img/posts/docker/nginx-pull.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/nginx-pull.png)
 _"docker pull nginx" 입력_
 
 ### 이미지 조회
@@ -75,7 +75,7 @@ _"docker pull nginx" 입력_
 ```shell
 docker image ls -a
 ```
-![Untitled](../../../assets/img/posts/docker/docker_image_ls.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/docker_image_ls.png)
 _Pull 받았던 nginx가 보인다_
 
 ### Container 생성
@@ -92,7 +92,7 @@ docker run -d --name nginx -p 80:80 nginx
 >
 > -p : host port number와 conatiner 내부 port를 포워딩 해주는 옵션 ("host":"docker container")
 
-![Untitled](../../../assets/img/posts/docker/docker_run.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/docker_run.png)
 _이상한 문구 나오면 성공_
 
 ### Container 조회
@@ -103,7 +103,7 @@ docker ps
 # 모든 Container 조회
 docker ps -a
 ```
-![Untitled](../../../assets/img/posts/docker/docker_ps.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/docker_ps.png)
 _아까 올린 nginx가 보인다_
 
 
@@ -111,6 +111,6 @@ _아까 올린 nginx가 보인다_
 주소창에 [localhost](http://localhost "localhost")로 입력. 
 _(web server 기본 port 번호 인 80을 사용했기 때문에 port 번호는 생략)_
 
-![Untitled](../../../assets/img/posts/docker/nginx_home.png)
+![Untitled](../../../assets/img/posts/docker/docker_container/nginx_home.png)
 
 위 와 같은 화면이 나오면 컨테이너 생성 완료!

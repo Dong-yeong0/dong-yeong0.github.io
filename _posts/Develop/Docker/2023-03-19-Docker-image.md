@@ -31,21 +31,21 @@ _[Docker - image가 저장되는 방식](https://woochan-autobiography.tistory.c
 
 _[Docker — What it is, How Images are structured, Docker vs. VM and some tips (part 1)](https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f)_
 
-![Untitled](../../../assets/img/posts/docker/nginx-pull.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/nginx-pull.png)
 _Docker image를 pull 받게 되면 여러개로 분리 된 조각 형태를 내려받는 것 처럼 보입니다._
 
 이렇게 분리 된 데이터 각각을 **레이어(Layer)** 라고 합니다.
 
  사진으로 보게 되면,
 
-![Untitled](../../../assets/img/posts/docker/docker-image-layer.png){: width="700px"}
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-image-layer.png){: width="700px"}
 _Docker layer1_
 
-레이어는 docker image가 build 될 때 Dockerfile에 정의한 명령문을 순서대로 실행하면서 만들어진다.
+레이어는 docker image가 build 될 때 Dockerfile에 정의한 명령문을 순서대로 실행하면서 만들어집니다
 
-이 레이어들은 각각 독립적으로 저장되고 readonly이기 때문에 임의로 수정할 수 없습니다.
+이 레이어들은 각각 독립적으로 저장되고 readonly이기 때문에 임의로 수정할 수 없습니다
 
-![Untitled](../../../assets/img/posts/docker/docker-layer.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-layer.png)
 _Docker layer2_
 
 Ubuntu image가 **A + B + C** layer들의 집합이라고 생각하면 Nginx image는 **A + B + C + nginx**가 됩니다.
@@ -133,10 +133,10 @@ docker build -t flask .
 
 build 시 layer가 총 5step이 나오게 됩니다.
 
-![Untitled](../../../assets/img/posts/docker/docker-build-step1.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-build-step1.png)
 _Build step 1_
 
-![Untitled](../../../assets/img/posts/docker/docker-build-step2.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-build-step2.png)
 _Build step 2_
 
 ### Image 조회
@@ -145,7 +145,7 @@ _Build step 2_
 docker image ls
 ```
 
-![Untitled](../../../assets/img/posts/docker/flask-build-ls.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/flask-build-ls.png)
 _docker image ls 결과_
 
 ### Build 된 image 사용
@@ -154,12 +154,12 @@ _docker image ls 결과_
 docker run -d -p 5000:5000/tcp --name flask flask:latest
 ```
 
-![Untitled](../../../assets/img/posts/docker/docker-build-result.png)
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-build-result.png)
 _docker run 결과_
 
 ### 결과
 
 [localhost:5000](http://localhost:5000/)에 접속하면 "Hello docker image" 가 나오게 됩니다.
 
-![Untitled](../../../assets/img/posts/docker/docker-build-result-helloworld.png){: width="500px"}
+![Untitled](../../../assets/img/posts/docker/docker_image/docker-build-result-helloworld.png){: width="500px"}
 _Good_
