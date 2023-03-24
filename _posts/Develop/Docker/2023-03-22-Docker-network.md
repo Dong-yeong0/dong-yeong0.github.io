@@ -72,8 +72,8 @@ docker network ls -f name=test-net
 ![Untitled](../../../assets/img/posts/docker/docker_network/docker-test-net-ls.png)
 _default인 bridge로 생성된 것을 확인할 수 있습니다._
 
-```shell
-docker network rm test-net
-```
+## Detail netwokr information
 
-네, 그리고 바로 지워주시면 됩니다.
+```shell
+docker network inspect test-net
+```
