@@ -7,6 +7,8 @@ tags: [docker]
 comments: true
 ---
 
+![Untitled](../../../assets/img/posts/docker/docker_logo.png){:width="400px"}
+
 ## Network
 
 Docker container는 각각 격리된 환경에서 실행되기 때문에 기본적으로 다른 container와 통신이 불가능 합니다. 하지만 여려 개의 컨테이너를 하나의 Docker network에 연결을 시키면 서로 통신이 가능해 집니다.

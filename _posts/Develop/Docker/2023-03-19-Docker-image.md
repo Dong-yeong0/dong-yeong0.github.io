@@ -7,6 +7,8 @@ tags: [docker]
 comments: true
 ---
 
+![Untitled](../../../assets/img/posts/docker/docker_logo.png){:width="400px"}
+
 ## Image?
 
 Image는 docker에서 **서비스 운영에 필요한 library, 실행파일을 묶은 형태**를 말합니다.
