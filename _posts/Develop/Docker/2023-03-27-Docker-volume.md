@@ -33,3 +33,37 @@ volume은 bind mount에 비해 몇가지 장점이 있습니다.
 - Docker Desktop의 volume은 Mac 및 Windows host의 bind mount보다 높은 성능을 제공합니다.
 
 ## Bind mount
+
+## Create volume
+
+먼저, Docker에서 평범한 방법인 volume에 대해서 알아보겠습니다.
+
+```shell
+$ docker volume create test-volume
+test-volume
+```
+
+### volume ls
+
+```shell
+docker volume ls
+DRIVER              VOLUME NAME
+local               test-volume
+```
+
+### docker volume inspect
+
+```shell
+docker volume inspect test-volume
+[
+    {
+        "CreatedAt": "2023-03-29T18:03:46Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/test-volume/_data",
+        "Name": "test-volume",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+```
