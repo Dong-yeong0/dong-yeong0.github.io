@@ -2,8 +2,8 @@
 layout: post
 title: "[Docker] Image 🐋"
 date: 2023-03-19 14:41:00 +09:00
-categories: [Docker, image]
-tags: [Docker]
+categories: [Devops, Docker, image]
+tags: [Devops, Docker]
 comments: true
 ---
 

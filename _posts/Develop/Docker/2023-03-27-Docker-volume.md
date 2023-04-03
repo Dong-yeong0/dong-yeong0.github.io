@@ -2,8 +2,8 @@
 layout: post
 title: "[Docker] Volume"
 date: 2023-03-27 19:40:00 +09:00
-categories: [Docker, volume]
-tags: [Docker]
+categories: [Devops, Docker, volume]
+tags: [Devops, Docker]
 comments: true
 ---
 

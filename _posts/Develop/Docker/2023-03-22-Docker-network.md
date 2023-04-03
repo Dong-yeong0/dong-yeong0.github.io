@@ -2,8 +2,8 @@
 layout: post
 title: "[Docker] Network"
 date: 2023-03-22 20:22:00 +09:00
-categories: [Docker, network]
-tags: [Docker]
+categories: [Devops, Docker, network]
+tags: [Devops, Docker]
 comments: true
 ---
 
