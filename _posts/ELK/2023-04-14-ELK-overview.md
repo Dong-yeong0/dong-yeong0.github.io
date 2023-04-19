@@ -36,11 +36,21 @@ IOT service를 만드는 중, sensor에서 주기적으로 전송을 하는 오�
 
 Elasticsearch는 Apache Lucene( 아파치 루씬 ) 기반의 Java 오픈소스 분산 검색 엔진입니다.
 
+Elasticsearch는 검색을 위해 단독으로도 사용되며, ELK (**E**lasticsearch, **L**ogstash, **K**ibana) 스택으로도 사용됩니다.
+
 Elasticsearch를 통해 루씬 라이브러리를 단독으로 사용할 수 있게 되었으며, 방대한 양의 데이터를 신속하게, 거의 실시간( NRT, Near Real Time )으로 저장, 검색, 분석할 수 있습니다.
 
-Elasticsearch은 검색을 위해 단독으로도 사용되며, ELK (**E**lasticsearch, **L**ogstash, **K**ibana) 스택으로도 사용됩니다.
+문서를 수집, 수집한 문서를 검색하기 쉽게 **색인**하고 저장된 색인으로 부터 질의를 하면 해당 문서를 검색하여 결과로 제공합니다.
 
-DB의 개념과 조금 비슷합니다.
+검색엔진의 개념과 조금 비슷합니다.
+
+#### 동작
+
+Elasticsearch의 index에 데이터를 적재하며, 색인 된 데이터를 검색하는 원리.
+
+1. REST API를 통해 **JSON** 형태로 Elasticsearch에 전송합니다.
+2. Elasticsearch가 해당 index의 `_source(데이터 배열)`에 해당하는 모든 필드를 조회하여 데이터를 저장합니다.
+3. client -> REST API를 통해 검색(조회), 분석(집게)를 할 수 있는 질의 request하면 response로 해당 질의에 맞는 데이터를 응답합니다.
 
 ### L → Logstash
 
