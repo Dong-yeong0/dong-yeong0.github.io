@@ -29,9 +29,6 @@ IOT service를 만드는 중, sensor에서 주기적으로 전송을 하는 오�
 
 ## ELK 란?
 
-### ELK stack의 구성 및 원리
-
-
 ### E → Elasticsearch
 
 Elasticsearch는 Apache Lucene( 아파치 루씬 ) 기반의 Java 오픈소스 분산 검색 엔진입니다.
@@ -65,3 +62,13 @@ Kibana는 데이터 시각화 도구이다. Elasticserach 문서를 시각화 �
 Kibana 대시보드는 Elasticsearch을 사용하여 수행되는 복잡한 쿼리를 시각화하기 위해 다양한 대화형 다이어그램, 지리공간 데이터, 타임라인 및 그래프를 제공합니다.
 
 Kibana를 사용하여 특정 필요에 따라 사용자 지정 그래프를 만들고 저장할 수 있습니다.
+
+### Install
+
+[docker-compose file Github](https://github.com/Dong-yeong0/Dev/blob/main/ELK/docker-compose.yml)
+
+복사 후 파일 위치에서
+
+```shell
+docker-compose up --build -d
+```
