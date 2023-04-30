@@ -20,3 +20,6 @@ package-lock.json
 
 # Test code
 tests
+
+package
+node_modules
