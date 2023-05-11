@@ -23,5 +23,8 @@ tests
 
 package
 node_modules
-
+dist
 build
+pg_data
+app_volume
+
