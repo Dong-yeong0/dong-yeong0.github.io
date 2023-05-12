@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Python] virtualenv"
+title: "[Python] Virtualenv"
 date: 2023-03-14 09:00:00 +09:00
 categories: [Python, venv, virtualenv]
 tags: [Python]
