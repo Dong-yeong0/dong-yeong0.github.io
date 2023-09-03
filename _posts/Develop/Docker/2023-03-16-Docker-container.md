@@ -48,7 +48,7 @@ Hypervisor를 이용한 가상화를 보면 Host OS와 완전히 분리되는 �
 간략히,
 컨테이너를 사용하는 것은 가상머신을 생성하는 것이 아니라 Host OS가 사용하는 자원을 분리하여 여러 환경을 만들 수 있도록 하는 것이다.
 
-## Make nginx container
+## Example
 
 간단하게 nginx 웹서버를 구동 시켜보자
 

@@ -2,8 +2,8 @@
 layout: post
 title: "[ELK] ELK 란?"
 date: 2023-04-14 20:46:00 +09:00
-categories: [ELK]
-tags: [ELK]
+categories: [ELK, Elasticsearch]
+tags: [ELK, Elasticsearch]
 comments: true
 ---
 ![Untitled](https://assets-global.website-files.com/5e0fd4aa98f2dc47fcd00bb7/5e14d9029a07bd0ec2ed1c1e_Will-Migrating-to-the-Cloud-Save-Money-5.png)
