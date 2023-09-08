@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "[Kafka] Kafka 란?"
+title: "[Kafka] Key를 사용하는 이유"
 date: 2023-09-08 23:36:00 +09:00
 categories: [Kafka]
 tags: [Kafka]
 comments: true
 ---
 
-<iframe src="https://giphy.com/embed/26ufdipQqU2lhNA4g" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/producthunt-mind-blown-blow-your-26ufdipQqU2lhNA4g">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/26ufdipQqU2lhNA4g" width="100%" height="378" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/producthunt-mind-blown-blow-your-26ufdipQqU2lhNA4g">via GIPHY</a></p>
 
 ### 현재 상황
 
