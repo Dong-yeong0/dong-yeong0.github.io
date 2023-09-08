@@ -14,25 +14,25 @@ comments: true
 ```python
 @api.route("/")
 class Test(Resoucre):
-	def post(self):
-		# Data 가공 logic
-		# .
-		# .
-		# .
-		try:
-      kafka_result = current_app.kafka.send(
-          "SAFEDATA-CH-senser-data", key={"devimei": devimei}, value=data
-      ).get()
+  def post(self):
+  # Data 가공 logic
+  # .
+  # .
+  # .
+  try:
+    kafka_result = current_app.kafka.send(
+        "SAFEDATA-CH-senser-data", key={"devimei": devimei}, value=data
+    ).get()
 
-      current_app.logger.debug(f"Published message to Kafka (Offset: {kafka_result.offset}, Partition: {kafka_result.partition})")
-      current_app.kafka.flush()
+    current_app.logger.debug(f"Published message to Kafka (Offset: {kafka_result.offset}, Partition: {kafka_result.partition})")
+    current_app.kafka.flush()
 
-      response = True
-	  except Exception as e:
-      response = False
-      current_app.logger.debug(e)
-	  finally:
-      return {"result": response}, 201
+    response = True
+  except Exception as e:
+    response = False
+    current_app.logger.debug(e)
+  finally:
+    return {"result": response}, 201
 ```
 
 현재 코드에서 key값을 `{"devimei": devimei}` 이 값은 각 센서의 고유한 번호 입니다.
@@ -45,7 +45,7 @@ class Test(Resoucre):
 
 ### **메시지 분할을 위한 키 사용**
 
-Kafka 메시지에서 키를 사용하는 것은 주로 메시지 분할을 제어하기 위한 것입니다. 
+Kafka 메시지에서 키를 사용하는 것은 주로 메시지 분할을 제어하기 위한 것입니다.
 
 동일한 키가 일관되게 사용되면 Kafka는 동일한 키를 가진 모든 메시지가 동일한 파티션으로 전송되도록 합니다. 이는 순서를 유지하는 데 유용합니다.
 
