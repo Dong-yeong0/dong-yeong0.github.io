@@ -7,12 +7,6 @@ tags: [Devops, Jenkins]
 comments: true
 ---
 
-### Ref
-
-[Mattermost Notification Plugin](https://www.jenkins.io/doc/pipeline/steps/mattermost/)
-
-[[CI/CD] Jenkins와 Mattermost 연동](https://velog.io/@rungoat/CICD-Jenkins%EC%99%80-Mattermost-%EC%97%B0%EB%8F%99)
-
 ## 1. Mattermost 설정
 
 ### 참고사항
@@ -85,7 +79,7 @@ pipeline {
         success {
         	script {
                 mattermostSend (
-									color: 'good', 
+                    color: 'good', 
 	                message: "빌드 성공: ${env.JOB_NAME} #${env.BUILD_NUMBER} by ${Author_ID}(${Author_Name})\n(<${env.BUILD_URL}|Details>)", 
 	                endpoint: '{endpoint입력}', 
 	                channel: '{channel입력}'
@@ -95,7 +89,7 @@ pipeline {
         failure {
         	script {
                 mattermostSend (
-									color: 'danger', 
+                    color: 'danger', 
 	                message: "빌드 실패: ${env.JOB_NAME} #${env.BUILD_NUMBER} by ${Author_ID}(${Author_Name})\n(<${env.BUILD_URL}|Details>)", 
 	                endpoint: '{endpoint입력}', 
 	                channel: '{channel입력}'
@@ -105,3 +99,9 @@ pipeline {
     }
 }
 ```
+
+### Ref
+
+[Mattermost Notification Plugin](https://www.jenkins.io/doc/pipeline/steps/mattermost/)
+
+[[CI/CD] Jenkins와 Mattermost 연동](https://velog.io/@rungoat/CICD-Jenkins%EC%99%80-Mattermost-%EC%97%B0%EB%8F%99)
